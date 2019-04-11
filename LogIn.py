@@ -13,7 +13,7 @@ tk.Label(window,text = " Log In ").pack()
 
 #form 
 tk.Label(window, text="Username").place(x = 50,y = 50)
-tk.Label(window, text="Last Name").place(x = 50,y = 100)
+tk.Label(window, text="Lastname").place(x = 50,y = 100)
 
 name = tk.Entry(window)
 name.place(x = 150,y = 50)
@@ -38,9 +38,10 @@ def showData():
 			print(i)
 			rec = 1
 		if rec == 0:
-			tk.messagebox.showerror("Error","Not a valid login creditials")
+			tk.messagebox.showerror("Error","Invalid login creditials")
 		else:
 			tk.messagebox.showinfo("Info","Log in success")
+			# some stuff after success login 
 		mydb.commit() 	
 	except Exception as e:
 		print(e)
